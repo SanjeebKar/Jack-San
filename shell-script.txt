@@ -1,0 +1,197 @@
+#!/bin/bash
+
+echo "What is your name?"
+read name
+
+echo "$name , how are you ?"
+read remark
+
+echo "I am also  $remark"
+
+while true 
+do
+{ 
+ echo "Do you want to have some food $name sir ?"
+ read option
+
+ if [ $option = "yes" ] ;
+ then 
+ ARRAYNAME=(momo coffee pizza sandwich )
+ echo ${ARRAYNAME[*]}
+ else 
+ echo " Thanks for visiting !!!"
+ break 
+ fi
+
+
+ echo "$name, what do you wanna have?"
+ read food
+
+
+ if [ $food = "coffee" ] ;
+ then
+    echo " which coffee you want ?"
+    read coffee
+    echo "do you want to add some biscuits/puff with it?"
+    read answer
+    if [ $answer = "yes" ] ; then
+     echo "sweet biscuit or salt biscuits $name sir ?"
+     read biscuit
+     echo " your $coffee with $biscuits will be ready within 15 mins !! Thanks for ordering !!! "
+    else
+     echo " your $coffee will be ready within 10 mins !!! Thanks for ordering!!!!! "
+    fi
+
+ elif [ $food = "momo" ] ;
+ then 
+    echo " $name sir , Do you want veg or non-veg ?"
+    read momo
+    if [ $momo = "veg" ] ; then
+     echo " Do you want to add any beverage along with food ? "
+     read cold
+     if [ $cold = "yes" ] ; then
+      for table in {Coke fanta sprite mazza} 
+        do
+          echo "Beverages we have are : $table"
+      done    
+      echo " which beverage do you want  $name  sir?"
+      read ch
+      case $ch in
+             "Coke")
+                echo " Your Veg-momo along with Coke will be ready by 30 mins !!!! Thanks for ordering !!!"
+             ;;
+             "fanta")
+                echo " Your Veg-momo along with fanta will be ready by 30 mins !!!! Thanks for ordering !!!"      
+             ;;   
+             "Sprite")
+                echo " Your Veg-momo along with Sprite will be ready by 30 mins !!!! Thanks for ordering !!!"      
+             ;;
+             "mazza")
+                echo " Your Veg-momo along with mazza will be ready by 30 mins !!!! Thanks for ordering !!!"      
+             ;; 
+             *)
+      esac
+     else 
+     echo "your order will be ready by 30 mins !!!! Thanks for ordering !!!"
+     fi                                                                                                                                                                
+    elif [ $momo = "non-veg" ] ; then
+     echo " Which non-veg momo do you want $name sir "
+     read ac
+     case $ac in
+             "chicken")
+                echo " okk !! that's great choice!!!"
+             ;;
+             "mutton")
+                echo "  okk !! that's great choice!!!"
+             ;;
+             *)
+     esac
+     echo " Do you want to add any beverage along with food ? "
+     read cold
+     if [ $cold = "yes" ] ; then
+      echo " which beverage do you want  $name  sir ?"
+      read ch
+      case $ch in
+             "Coke")
+                echo " Your $ac along with $ch will be ready by 30 mins !!!! Thanks for ordering !!!"
+             ;;
+             "fanta")
+                echo " Your $ac along with $ch will be ready by 30 mins !!!! Thanks for ordering !!!"      
+             ;;   
+             "Sprite")
+                echo " Your $ac along with $ch will be ready by 30 mins !!!! Thanks for ordering !!!"      
+             ;;
+             "mazza")
+                echo " Your $ac along with $ch will be ready by 30 mins !!!! Thanks for ordering !!!"      
+             ;; 
+             *)
+      esac
+     else 
+     echo "your order will be ready by 30 mins !!!! Thanks for ordering !!!"
+     fi 
+    fi 
+  
+
+ elif [ $food = "sandwich" ] ;
+ then 
+    echo " $name sir , Do you want veg or non-veg ?"
+    read momo
+    if [ $momo = "veg" ] ; then
+     echo "Do you want extra cheese ? "
+     read abc
+     if [ $abc = "yes" ] ; then
+      echo "ok!! We will add extra cheese in your Sandwich !!!!"
+     fi
+     echo " Do you want to add any beverage along with food ? "
+     read cold
+     if [ $cold = "yes" ] ; then
+      for table in {Coke fanta sprite mazza} 
+        do
+          echo "Beverages we have are : $table"
+      done    
+      echo " which beverage do you want  $name  sir?"
+      read ch
+      case $ch in
+             "Coke")
+                echo " Your Veg-sandwich along with Coke will be ready by 30 mins !!!! Thanks for ordering !!!"
+             ;;
+             "fanta")
+                echo " Your Veg-sandwich along with fanta will be ready by 30 mins !!!! Thanks for ordering !!!"      
+             ;;   
+             "Sprite")
+                echo " Your Veg-sandwich along with Sprite will be ready by 30 mins !!!! Thanks for ordering !!!"      
+             ;;
+             "mazza")
+                echo " Your Veg-sandwich along with mazza will be ready by 30 mins !!!! Thanks for ordering !!!"      
+             ;; 
+             *)
+      esac
+     else 
+     echo "your order will be ready by 30 mins !!!! Thanks for ordering !!!"
+     fi                                                                                                                                                                
+    elif [ $momo = "non-veg" ] ; then
+     echo " Which non-veg sandwich do you want $name sir ? "
+     read ac
+     case $ac in
+             "chicken")
+                echo " okk !! that's great choice!!!"
+             ;;
+             "mutton")
+                echo "  okk !! that's great choice!!!"
+             ;;
+             *)
+     esac
+     echo "Do you want extra cheese ? "
+     read abc
+     if [ $abc = "yes" ] ; then
+      echo "ok!! We will add extra cheese in your Sandwich !!!!"
+     fi
+     echo " Do you want to add any beverage along with food ? "
+     read cold
+     if [ $cold = "yes" ] ; then
+      echo " which beverage do you want  $name  sir ?"
+      read ch
+      case $ch in
+             "Coke")
+                echo " Your $ac along with $ch will be ready by 30 mins !!!! Thanks for ordering !!!"
+             ;;
+             "fanta")
+                echo " Your $ac along with $ch will be ready by 30 mins !!!! Thanks for ordering !!!"      
+             ;;   
+             "Sprite")
+                echo " Your $ac along with $ch will be ready by 30 mins !!!! Thanks for ordering !!!"      
+             ;;
+             "mazza")
+                echo " Your $ac along with $ch will be ready by 30 mins !!!! Thanks for ordering !!!"      
+             ;; 
+             *)
+      esac
+     else 
+     echo "your order will be ready by 30 mins !!!! Thanks for ordering !!!"
+     fi 
+    fi    
+ fi
+}
+done 
+echo "Thanks for ordering !!!"
+
